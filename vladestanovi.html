@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta name="viewport" content="with=device-width, initial-scale=1.0">
+    <title> Vlade stanovi</title>
+    <link rel="stylesheet" href="stanovistil.css">
+    <script src="https://kit.fontawesome.com/23fdd0a9cc.js" crossorigin="anonymous"></script></head>
+  <body onload="slider()">
+<div class="banner">
+      <div class="slider">
+        <img src="slikestanovi/stan2.jpg" id="slideImg">
+    </div>
+    <div class="overlay">
+        <div class="navbar">
+            <div class="logo">
+                <img src="slikestanovi/logo.png">
+            </div>
+            <div class="nav-links">
+            <ul id="sidemenu">
+                <li><a href="vladestanovi.html">Naslovnica</a></li>
+                <li><a href="vladestanovi.html">Fotogalerija</a></li>
+                <li><a href="vladestanovi.html">Kontakt</a></li>
+                <i class="fas fa-times" onclick="closeMenu()"></i>
+                </ul>
+            <i class="fas fa-bars" onclick="openMenu()"></i>
+            </div>
+        </div>
+        
+        <div class="content">
+        <h1>NAJBOLJI STANOVI U KARLOVCU</h1>
+            <h3>Najam stanova na području karlovca</h3>
+        </div>
+    </div>
+      </div>
+      
+     <script>
+      var slideImg = document.getElementById("slideImg");
+         
+      var images = new Array(
+        "slikestanovi/stan2.jpg",
+        "slikestanovi/stan.jpg",
+        "slikestanovi/stan3.jpg"
+      );
+         
+        var len = images.length;
+         var i = 0;
+         
+         function slider(){
+             if(i > len-1){
+                 i = 0;
+             }
+             slideImg.src = images[i];
+             i++;
+             setTimeout('slider()', 3000);
+         }
+         
+      </script> 
+      <script>
+          var sidemenu = document.getElementById("sidemenu");
+          
+          function openMenu(){
+              sidemenu.style.right = "0";
+          }
+          
+          function closeMenu(){
+              sidemenu.style.right = "-240px";
+          }
+      </script>
+
+      
+<div id="portfolio">
+      <div class="container">
+          <h1 class="sub-title">Stanovi</h1>
+          <div class="work-list">
+            <div class="work">
+              <img src="slikestanovi/stan5.jpg">
+                <div class="layer">
+                    <h3>Stan br. 1</h3>
+                    <p>Pogledaj više o ovom stanu: </p>
+                    <a href=""><i class="fas fa-external-link-alt"></i></a>
+                </div>
+              </div>
+              
+              <div class="work">
+              <img src="slikestanovi/stan6.jpg">
+                <div class="layer">
+                    <h3>Stan br. 2</h3>
+                    <p>Pogledaj više o ovom stanu: </p>
+                    <a href=""><i class="fas fa-external-link-alt"></i></a>
+                </div>
+              </div>
+          </div>
+    </div>
+      </div>    
+      
+      
+<div id="contact">
+    <div class="container">
+    <div class="row">
+        <div class="contact-left">
+        <h1 class="sub-title">Kontaktiraj nas</h1>
+            <p><i class="fas fa-paper-plane"></i>kontakt@primjer.com</p>
+            <p><i class="fas fa-phone-square-alt"></i>0123456789</p>
+            <div class="social-icons2">
+                <a href=""><i class="fa-brands fa-instagram"></i></a>
+                <a href=""><i class="fa-brands fa-facebook"></i></a>
+            </div>
+        </div>
+        <div class="contact-right">
+        <form>
+           <input type="text" name="Ime" placeholder="Vaše ime" required>
+            <input type="email" id="email" placeholder="Vaš email" required>
+            <textarea name="Poruka" rows="6" placeholder="Vaša poruka"></textarea>
+            <button type="submit" class="btn2">Pošalji</button>
+            </form>
+        </div>
+        </div>
+    </div>
+</div> 
+
+  <section class="cta">
+    <h1>U slučaju problema ili upita <br>kontaktiraj našu korisničku podršku</h1>
+    <a href="#" class="hero-btn">KONTAKTI</a>
+    </section>    
+      
+      
+<div class="footer">
+          <h3>KONTAKT</h3>
+          <p>ULICA KUCNI BROJ,<br>Karlovac,<br>47000</p>
+        <div class="social-icons">
+            <a href="" ><i class="fa-brands fa-tiktok"></i></a>
+            <a href="" ><i class="fa-brands fa-instagram"></i></a>
+            <a href="" ><i class="fa-brands fa-youtube"></i></a>
+        </div>
+      </div>
+
+<div class="copyright">
+        <p>Copyright © Vlade stanovi, Made by Andrija Miličević</p>
+    </div>
+  </body>
+</html>
